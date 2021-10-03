@@ -22,5 +22,7 @@ const methods = [
 ] 
 
 methods.forEach(method => {
-    arrayMethods[method] 
+    arrayMethods[method] = function(...arg) {
+        
+    }
 })

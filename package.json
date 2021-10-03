@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Demiii/front-end/issues"
   },
-  "homepage": "https://github.com/Demiii/front-end#readme"
+  "homepage": "https://github.com/Demiii/front-end#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3"
+  }
 }

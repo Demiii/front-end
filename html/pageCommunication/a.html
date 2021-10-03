@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A</title>
+</head>
+<body>
+    <h1>BroadcastChannel 测试</h1>
+    <div>
+        <input type="text" id="input">
+        <button id="btn">
+            发送消息
+        </button>
+        <p id="getMsg">
+
+        </p>
+    </div>
+
+    <script>
+        const channel = new BroadcastChannel('test_channel')
+        const input = document.querySelector('#input')
+        const btn = document.querySelector('#btn')
+        const getMsg = document.querySelector('#getMsg')
+
+        // 发送消息
+        btn.addEventListener('click', e=>{
+            channel.postMessage(input.value)
+        })
+
+        // 接受消息
+        channel.onmessage = (e)=>{
+            console.log('A看看接收到的消息本体')
+            getMsg.innerHTML = e.data
+        }
+    </script>
+</body>
+</html>
