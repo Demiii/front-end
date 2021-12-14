@@ -12,5 +12,4 @@ Promise.race = (values)=>{
             }
         }
     })
-
 }

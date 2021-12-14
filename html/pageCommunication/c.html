@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+
+
+    </div>
+    <div id="bottom">haha</div>
+
+    
+    <script>
+        var el = document.getElementById('main')
+        function render(val) {
+    var tpl = `
+    <div>
+        <a id="button"><a>
+        <span>${val}</span>
+    </div>`;
+    console.log('document', document)
+    console.log('el', el)
+    el.innerHTML = tpl;
+}
+
+function A() {
+    let val = 0
+    // const [val, setVal] = useState(0)
+
+    return [
+        function() {
+            // setVal(++val);
+            ++val;
+            render(val);
+        }
+    ]
+}
+
+
+function main() {
+    var [onclick] = A();
+    
+    render(0);
+
+
+    document.getElementById('bottom').addEventListener('click', function() {
+        onclick();
+    });
+
+}
+main()
+    </script>
+    
+</body>
+</html>
