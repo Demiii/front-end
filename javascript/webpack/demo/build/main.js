@@ -1,10 +1,6 @@
-import path from "../node_modules/path";
-
+// import path from "path";
+// var path = require('../node_modules/path/path')
 (function () {
-    // import path from "../node_modules/path";
-
-//   let path = require('../node_modules/path');
-
   const modules = {
     '/Users/hudaiyan/myProject/front-end/javascript/webpack/demo/src/index.js':
       function (require, exports) {
@@ -37,9 +33,10 @@ import path from "../node_modules/path";
     const fn = modules[moduleId];
     let exports = {};
     const require = function (filepath) {
-      const dir = path.dirname(moduleId);
-      const filepath_abs = path.join(dir, filepath);
-      return exec(filepath_abs);
+      // const dir = path.dirname(moduleId);
+      // const filepath_abs = path.join(dir, filepath);
+      // return exec(filepath_abs);
+      return exec(filepath);
     };
     fn(require, exports);
     return exports;
