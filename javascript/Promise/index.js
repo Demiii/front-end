@@ -17,3 +17,4 @@ Promise.race([promise1, promise2]).then((res)=>{
 }).catch((res)=>{
     console.log('2222', res)
 })
+

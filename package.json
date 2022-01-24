@@ -18,5 +18,10 @@
   "homepage": "https://github.com/Demiii/front-end#readme",
   "devDependencies": {
     "babel-core": "^6.26.3"
+  },
+  "dependencies": {
+    "antd": "^4.17.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

@@ -6,4 +6,4 @@ Function.prototype.bind1 = function(obj) {
     }
 }
 
-test.bind1(foo)('lalala')
+test.bind1(foo)(9,9)
