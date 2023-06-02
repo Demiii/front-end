@@ -24,3 +24,8 @@ exports.A = new Node('A',
                 new Node('K')))))
         
 
+        //         A
+        // B                 E 
+        //     C                 F 
+        // D                 G 
+        //                H      K
