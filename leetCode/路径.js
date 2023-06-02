@@ -21,8 +21,16 @@ function F(x, y) {
     return dp[x][y]
 }
 function main(m,n) {
-    dp = new Array(m+1).fill([])
+    dp = new Array(m+1).fill(0).map(()=>[])
+    let i = 0;j = 0;
+    while(i<m || j<n) {
+        i < m && F(i+1, j)
+        j < n && F(i, j+1)
+        i < m && j < n && F(i+1, j+1)
+        i += 1;
+        j += 1;
+    }
     return F(m,n)
 }
-let res = main(1, 2)
+let res = main(100, 100)
 console.log('res', res)

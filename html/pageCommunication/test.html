@@ -2,7 +2,7 @@
     <head>
         <style>
             div {
-                height: 200px;
+                height: 4000px;
                 width: 200px;
                 display: flex;
                 border: 1px solid blue;
@@ -27,5 +27,41 @@
         <span class="span3">3</span>
         <span class="span4">4</span>
     </div>
+    <script>   
+    // function debounce(fn, wait, immediate=false) {
+    //     let timer = null
+    //     return function() {
+    //         if(timer) {
+    //             clearTimeout(timer)
+    //         }else{
+    //             immediate && fn.call(this) 
+    //         }
+    //         timer = setTimeout(()=>{
+    //             !immediate && fn.call(this)
+    //             timer = null
+    //         }, wait)
+    //     }
+    // }
+    // window.onscroll = debounce(()=>{
+    //     console.log(888);
+    // }, 100, true)
+
+    
+    function throttle(fn, wait, immediate = false) {
+        let timer = null
+        return ()=>{
+            if(!timer) {
+                immediate && fn.call(this)
+                timer = setTimeout(()=>{
+                    !immediate && fn.call(this)
+                    timer = null
+                }, wait)
+            }
+        }
+    }
+    window.onscroll = throttle(()=>{
+        console.log(888);
+    }, 500, true)
+    </script>
 </body>
 </html>
